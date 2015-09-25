@@ -14,11 +14,11 @@ import com.netflix.ribbon.Ribbon;
 @Path("/hello")
 public class HelloResource {
 
-    private GreetingProxy greetingProxy;
+    private GreetingService greetingProxy;
 
     @PostConstruct
     public void init() {
-        greetingProxy = Ribbon.from(GreetingProxy.class);
+        greetingProxy = Ribbon.from(GreetingService.class);
     }
 
     @GET

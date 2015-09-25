@@ -3,7 +3,7 @@ package carve.ribbonapp;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-@ApplicationPath("webapp")
+@ApplicationPath("/")
 public class JAXRSConfiguration extends Application {
 
 }
