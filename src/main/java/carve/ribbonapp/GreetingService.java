@@ -9,7 +9,10 @@ import com.netflix.ribbon.proxy.annotation.Http;
 import com.netflix.ribbon.proxy.annotation.Http.HttpMethod;
 import com.netflix.ribbon.proxy.annotation.Hystrix;
 
-@ClientProperties(properties = { @Property(name = "ReadTimeout", value = "2000"), @Property(name = "ConnectTimeout", value = "1000"), @Property(name = "NIWSServerListClassName", value = "carve.ribbonapp.CuratorServerList") })
+@ClientProperties(properties = {
+        @Property(name = "ReadTimeout", value = "2000"),
+        @Property(name = "ConnectTimeout", value = "1000"),
+        @Property(name = "NIWSServerListClassName", value = "carve.ribbonapp.CuratorServerList") })
 public interface GreetingService {
 
     @Http(method = HttpMethod.GET, uri = "/carve.greeting/v1/greeting/")
